@@ -15,8 +15,8 @@ public class StudetnZachet {
         return matematika;
     }
 
-    public void setMatematika(List<Integer> matematika) {
-        this.matematika = matematika;
+    public void setMatematika(Integer matematika) {
+        this.matematika.add(matematika);
     }
 
     public List<Integer> getRusski() {
@@ -32,32 +32,60 @@ public class StudetnZachet {
     }
 
     public void setFizika(Integer fizika) {
-        this.fizika;
+        this.fizika.add(fizika);
     }
 
     public Boolean getZacetRus() {
         int sum = 0;
-        for(Integer i:russki){
-            sum+=i;
+        for (Integer i : russki) {
+            sum += i;
         }
-        if(sum!=0){
-            sum = sum/russki.size();
-            if(sum >2){
-                return  true;
-            }else {
+        if (sum != 0) {
+            sum = sum / russki.size();
+            if (sum > 2) {
+                return true;
+            } else {
                 return false;
             }
-        }else {
+        } else {
             return true;
         }
-        
+
     }
 
     public Boolean getZacetMatem() {
-        return zacetMatem;
+        int sum = 0;
+        for (Integer i : matematika) {
+            sum += i;
+        }
+        if (sum != 0) {
+            sum = sum / matematika.size();
+            if (sum > 2) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return true;
+        }
+
     }
 
     public Boolean getZacetFiz() {
-        return zacetFiz;
+        int sum = 0;
+        for (Integer i : fizika) {
+            sum += i;
+        }
+        if (sum != 0) {
+            sum = sum / fizika.size();
+            if (sum > 2) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return true;
+        }
+
     }
 }

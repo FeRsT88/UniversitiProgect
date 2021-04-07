@@ -4,6 +4,15 @@ public class Student {
      private  String name ;
      private  Integer qc;
      private Boolean invite;
+     private StudetnZachet zachetka;
+
+    public StudetnZachet getZachetka() {
+        return zachetka;
+    }
+
+    public void setZachetka(StudetnZachet zachetka) {
+        this.zachetka = zachetka;
+    }
 
     public Boolean getInvite() {
         return invite;
@@ -35,6 +44,7 @@ public class Student {
         this.qc = qc;
         this.name =name;
         this.invite = false;
+        this.zachetka = new StudetnZachet();
      }
 
     @Override

@@ -10,7 +10,10 @@ public class Main {
     public static void main(String[] args) {
         Universiti un = getUniversiti();
         UniwersitiWorker worc = new UniwersitiWorker(un);
-        worc.studentSort(StudentGenerator.getList(125));
+        worc.studentSort(StudentGenerator.getList(60));
+        worc.obuchenie("пв-34");
+        worc.obuchenie("пв-34");
+        worc.obuchenie("пв-34");
 
 
         /*worc.plusStudents("Петя", "сц-56", 70);
@@ -37,16 +40,16 @@ public class Main {
 
 
         List<Grup> m1 = new ArrayList<>();
-        Grup g1 = new Grup(null, "нк-55",19);
-        Grup g2 = new Grup(null, "цр-76",19);
+        Grup g1 = new Grup(null, "нк-55",8);
+        Grup g2 = new Grup(null, "цр-76",8);
         m1.add(g1);
         m1.add(g2);
         List<Focultet> mm1 = new ArrayList<>();
         Focultet fug1 = new Focultet(m1, "Ядерная физика", 30,80);
 
         List<Grup> m12 = new ArrayList<>();
-        Grup g12 = new Grup(null, "пв-34",19);
-        Grup g22 = new Grup(null, "цв-35",19);
+        Grup g12 = new Grup(null, "пв-34",8);
+        Grup g22 = new Grup(null, "цв-35",8);
         m12.add(g12);
         m12.add(g22);
         List<Focultet> mm11 = new ArrayList<>();
@@ -54,8 +57,8 @@ public class Main {
 
 
         List<Grup> m11 = new ArrayList<>();
-        Grup g11 = new Grup(null, "пг-25",19);
-        Grup g32 = new Grup(null, "сц-56",19);
+        Grup g11 = new Grup(null, "пг-25",8);
+        Grup g32 = new Grup(null, "сц-56",8);
         m11.add(g11);
         m11.add(g32);
         Focultet fug2 = new Focultet(m11, "Ядерная математика", 80,130);

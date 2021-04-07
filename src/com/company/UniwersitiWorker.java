@@ -1,15 +1,27 @@
 package com.company;
 
+import com.company.predmet.Fizika;
+import com.company.predmet.Matematica;
+import com.company.predmet.Predmet;
+import com.company.predmet.Russki;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.Scanner;
 
 public class UniwersitiWorker {
     private Universiti un;
+    private List<Predmet> predmetList = new ArrayList<>();
 
     public UniwersitiWorker(Universiti un) {
         this.un = un;
-        Scanner sc = new Scanner(System.in);
+        Predmet p = new Russki();
+        Predmet p1 = new Fizika();
+        Predmet p2 = new Matematica();
+        predmetList.add(p);
+        predmetList.add(p1);
+        predmetList.add(p2);
     }
 
     public List<Student> getStudents() {
@@ -169,12 +181,15 @@ public class UniwersitiWorker {
             student.setInvite(true);
         }
     }
-    public void zdachaZacheta (List<Student> studentList){
-        List<Student> stud = new ArrayList<>();
-        List<Focultet>focultets = this.un.getList();
-        for(Focultet foc:focultets){
-            List<Grup>grups =foc.getGrup();
+    public void obuchenie (String grupName) {
+        List<Student> students = getStudents(grupName);
+        for(Student stud:students){
+            for(Predmet predmet:predmetList){
+                predmet.poluchenieOcenki(stud);
+            }
 
         }
+
     }
+
 }
